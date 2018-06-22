@@ -44,16 +44,6 @@ public class Reports {
 		}
 	}
 
-	/*public static void Result(ITestResult result) {
-		if (result.getStatus() == ITestResult.FAILURE) {
-			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
-			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			logger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
-		}
-		extent.endTest(logger);
-	}*/
-
 	public static void TearDown() {
 		extent.flush();
 		extent.close();

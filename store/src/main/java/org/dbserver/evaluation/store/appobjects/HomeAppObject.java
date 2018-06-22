@@ -10,29 +10,50 @@ public class HomeAppObject {
 	public HomeAppObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	
-	public WebElement getProductSearch () {
-		return this.driver.findElement(By.id("search_input")); 
+
+	public WebElement getProductSearch() {
+		return this.driver.findElement(By
+				.id("search_input"));
 	}
+
 	public WebElement getProductSearchButton() {
-		return this.driver.findElement(By.xpath(
-				"//*[@id=\"tygh_main_container\"]/div[2]/div/div[1]/div[3]/div/div[1]/div/div/form/button")); 
+		return this.driver.findElement(By
+				.xpath("//*[@id=\"tygh_main_container\"]/div[2]/div/div[1]/div[3]/div/div[1]/div/div/form/button"));
 	}
+
 	public WebElement getSelectProduct() {
-		return this.driver.findElement(By.cssSelector(
-				"#pagination_contents > div.grid-list > div:nth-child(1) > div > form > div.ty-grid-list__control"));
+		return this.driver.findElement(By
+				.cssSelector("#pagination_contents > div.grid-list > div:nth-child(1) > div > form > div.ty-grid-list__control"));
 	}
+
 	public WebElement getGoProduct() {
-		return this.driver.findElement(By.cssSelector(
-			"#pagination_contents > div.grid-list > div:nth-child(1) > div > form > div.ty-grid-list__control > div > a"));
+		return this.driver.findElement(By
+				.cssSelector("#pagination_contents > div.grid-list > div:nth-child(1) > div > form > div.ty-grid-list__control > div > a"));
 	}
+
 	public WebElement getGoShoppingCart() {
-		return this.driver.findElement(By.cssSelector("#sw_dropdown_8 > a > i"));
+		return this.driver.findElement(By
+				.cssSelector("#sw_dropdown_8 > a > i"));
 	}
-	public WebElement getShoppingCart() { 
-		return this.driver.findElement(By.cssSelector(".cm-cart-buttons > div:nth-child(1) > a:nth-child(1)"));
+
+	public WebElement getShoppingCart() {
+		return this.driver.findElement(By
+				.cssSelector("#dropdown_8 > div > div.cm-cart-buttons.ty-cart-content__buttons.buttons-container.full-cart > div.ty-float-left > a"));
 	}
-	public WebElement getproduct() {
-		return this.driver.findElement(By.cssSelector(".ty-cart-content > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)"));
+	public WebElement getContinueButton() {
+		return this.driver.findElement(By
+				.cssSelector("div > div > div.ty-product-notificationbody > div.cm-notification-content.cm-notification-content-extended.notification-content-extended.cm-auto-hide > div > div.ty-product-notification__buttons.clearfix > div.ty-float-left > a__buttons.clearfix > div.ty-float-left > a"));
 	}
-} 
+
+	public By getProduct = By
+			.cssSelector("#product_main_info_ajax > div > form > div.ty-product-block__left > h1 > a > bdi");
+	
+	public By userSelector = By
+			.cssSelector("#tygh_main_container > div.tygh-content.clearfix > div > div:nth-child(2) > div > div > h1 > span.ty-mainbox-title__left");
+	
+	public By resulte = By
+			.className("ty-cart-content__product-title");
+
+	public By userProdutc = By
+			.cssSelector("#sw_dropdown_8 > a > span > span.ty-block.ty-minicart-title__header.ty-uppercase");
+}

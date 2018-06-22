@@ -34,8 +34,11 @@ public class HomeTask {
 	public void shoppingCart() {
 		home.getShoppingCart().click();
 	}
+	public void continueButton() {
+		home.getContinueButton().click();
+	}
 	public void navigateToHomePage() {
 		this.driver.get(Home_URL);
 	}
-
+	
 }
