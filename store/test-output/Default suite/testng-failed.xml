@@ -7,7 +7,7 @@
         <methods>
           <include name="start"/>
           <include name="tearDown"/>
-          <include name="testOne" invocation-numbers="0"/>
+          <include name="testOne" invocation-numbers="1"/>
         </methods>
       </class> <!-- org.dbserver.evaluation.store.testcases.BuyProductTestCase -->
     </classes>

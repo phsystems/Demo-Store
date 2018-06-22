@@ -12,7 +12,7 @@ public class HomeTask {
 	
 	public HomeTask (WebDriver driver) {
 		this.home = new HomeAppObject(driver);
-		this.driver = driver; 
+		this.driver = driver;  
 	}
 	public void fillProdutc(String product) { 
 		this.home.getProductSearch().click();
@@ -35,7 +35,7 @@ public class HomeTask {
 		home.getShoppingCart().click();
 	}
 	public void continueButton() {
-		home.getContinueButton().click();
+		home.getShoppingButton().click();
 	}
 	public void navigateToHomePage() {
 		this.driver.get(Home_URL);

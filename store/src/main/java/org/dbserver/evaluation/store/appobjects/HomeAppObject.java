@@ -36,24 +36,30 @@ public class HomeAppObject {
 				.cssSelector("#sw_dropdown_8 > a > i"));
 	}
 
-	public WebElement getShoppingCart() {
+	public WebElement getShoppingCart() { 
 		return this.driver.findElement(By
 				.cssSelector("#dropdown_8 > div > div.cm-cart-buttons.ty-cart-content__buttons.buttons-container.full-cart > div.ty-float-left > a"));
 	}
-	public WebElement getContinueButton() {
+	public WebElement getShoppingButton() {
 		return this.driver.findElement(By
-				.cssSelector("div > div > div.ty-product-notificationbody > div.cm-notification-content.cm-notification-content-extended.notification-content-extended.cm-auto-hide > div > div.ty-product-notification__buttons.clearfix > div.ty-float-left > a__buttons.clearfix > div.ty-float-left > a"));
+				.className("ty-btn__primary ty-btn__big ty-btn__add-to-cart cm-form-dialog-closer ty-btn"));
 	}
+	public By userProdutc = By
+			.cssSelector("#tygh_main_container > div.tygh-header.clearfix > div > div:nth-child(1) > div.span3.top-logo-grid > div > div > a > img");
+	
+	public By userButton = By
+			.cssSelector("#pagination_contents > div.grid-list > div:nth-child(1) > div > form > div.ty-grid-list__control > div > a");
+	
+	public By waitSearch = By
+			.cssSelector("#tygh_main_container > div.tygh-content.clearfix > div > div:nth-child(2) > div > div > h1 > span.ty-mainbox-title__left");
 
 	public By getProduct = By
 			.cssSelector("#product_main_info_ajax > div > form > div.ty-product-block__left > h1 > a > bdi");
 	
 	public By userSelector = By
-			.cssSelector("#tygh_main_container > div.tygh-content.clearfix > div > div:nth-child(2) > div > div > h1 > span.ty-mainbox-title__left");
+			.cssSelector("#sw_dropdown_8 > a > span > span.ty-block.ty-minicart-title__header.ty-uppercase");
 	
-	public By resulte = By
+	public By userResulte = By
 			.className("ty-cart-content__product-title");
 
-	public By userProdutc = By
-			.cssSelector("#sw_dropdown_8 > a > span > span.ty-block.ty-minicart-title__header.ty-uppercase");
 }

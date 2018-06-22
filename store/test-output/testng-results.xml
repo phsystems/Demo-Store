@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39878" started-at="2018-06-22T02:58:07Z" finished-at="2018-06-22T02:58:46Z">
+  <suite name="Default suite" duration-ms="47726" started-at="2018-06-22T16:05:27Z" finished-at="2018-06-22T16:06:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39878" started-at="2018-06-22T02:58:07Z" finished-at="2018-06-22T02:58:46Z">
+    <test name="Default test" duration-ms="47726" started-at="2018-06-22T16:05:27Z" finished-at="2018-06-22T16:06:15Z">
       <class name="org.dbserver.evaluation.store.testcases.BuyProductTestCase">
-        <test-method status="PASS" signature="start()[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="start" is-config="true" duration-ms="8080" started-at="2018-06-22T02:58:07Z" finished-at="2018-06-22T02:58:15Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="start" is-config="true" duration-ms="7903" started-at="2018-06-22T16:05:27Z" finished-at="2018-06-22T16:05:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="FAIL" signature="testOne(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="testOne" duration-ms="14860" started-at="2018-06-22T02:58:15Z" data-provider="ProductSearch" finished-at="2018-06-22T02:58:30Z">
+        <test-method status="PASS" signature="testOne(java.lang.String, java.lang.String)[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="testOne" duration-ms="24963" started-at="2018-06-22T16:05:35Z" data-provider="ProductSearch" finished-at="2018-06-22T16:06:00Z">
           <params>
             <param index="0">
               <value>
@@ -20,77 +20,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Resultados da pesquisa]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
                 <![CDATA[button_cart_ajax94]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[Element <a class="ty-btn ty-btn__secondary ty-btn__big cm-dialog-opener cm-dialog-auto-size" href="http://demo.cs-cart.com/stores/22f1648b4446b3ad/index.php?dispatch=products.quick_view&product_id=94&prev_url=index.php%3Fsubcats%3DY%26pcode_from_q%3DY%26pshort%3DY%26pfull%3DY%26pname%3DY%26pkeywords%3DY%26search_performed%3DY%26q%3DBatman%26dispatch%3Dproducts.search%26security_hash%3D78801fbca7f013508e6ae61863f9d87e&n_items=94%2C96%2C114%2C84%2C248"> could not be scrolled into view
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'DESKTOP-RK11H6R', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 6496, moz:profile: C:\Users\Pedro Henrique\App..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: ad5b70bb-cd79-410c-bb1f-0f89b179c4ca]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <a class="ty-btn ty-btn__secondary ty-btn__big cm-dialog-opener cm-dialog-auto-size" href="http://demo.cs-cart.com/stores/22f1648b4446b3ad/index.php?dispatch=products.quick_view&product_id=94&prev_url=index.php%3Fsubcats%3DY%26pcode_from_q%3DY%26pshort%3DY%26pfull%3DY%26pname%3DY%26pkeywords%3DY%26search_performed%3DY%26q%3DBatman%26dispatch%3Dproducts.search%26security_hash%3D78801fbca7f013508e6ae61863f9d87e&n_items=94%2C96%2C114%2C84%2C248"> could not be scrolled into view
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'DESKTOP-RK11H6R', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 6496, moz:profile: C:\Users\Pedro Henrique\App..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: ad5b70bb-cd79-410c-bb1f-0f89b179c4ca
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at org.dbserver.evaluation.store.tasks.HomeTask.goToProdutc(HomeTask.java:29)
-at org.dbserver.evaluation.store.testcases.BuyProductTestCase.testOne(BuyProductTestCase.java:55)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method status="PASS" signature="testOne(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="testOne" duration-ms="15324" started-at="2018-06-22T02:58:30Z" data-provider="ProductSearch" finished-at="2018-06-22T02:58:45Z">
+        <test-method status="PASS" signature="testOne(java.lang.String, java.lang.String)[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="testOne" duration-ms="12967" started-at="2018-06-22T16:06:00Z" data-provider="ProductSearch" finished-at="2018-06-22T16:06:13Z">
           <params>
             <param index="0">
               <value>
@@ -99,11 +36,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[Resultados da pesquisa]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
                 <![CDATA[button_cart_ajax90]]>
               </value>
             </param>
@@ -111,7 +43,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="tearDown" is-config="true" duration-ms="1572" started-at="2018-06-22T02:58:45Z" finished-at="2018-06-22T02:58:46Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.dbserver.evaluation.store.testcases.BuyProductTestCase@eca6a74]" name="tearDown" is-config="true" duration-ms="1843" started-at="2018-06-22T16:06:13Z" finished-at="2018-06-22T16:06:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

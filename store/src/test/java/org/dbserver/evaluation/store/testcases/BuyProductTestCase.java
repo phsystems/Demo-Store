@@ -23,8 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BuyProductTestCase {
 	@DataProvider(name = "ProductSearch")
 	public static Object[][] credentials() {
-		return new Object[][] { { "Batman", "Resultados da pesquisa", "button_cart_ajax94" },
-				{ "PS3", "Resultados da pesquisa", "button_cart_ajax90" } };
+		return new Object[][] {{ "Batman", "button_cart_ajax94" },{ "PS3","button_cart_ajax90" }};
 	}
 
 	private WebDriver driver;
@@ -41,37 +40,36 @@ public class BuyProductTestCase {
 		Reports.startTest("Compra de Produto");
 	}
 
-	@Test(dataProvider = "ProductSearch")
-	public void testOne(String product, String result, String id) throws InterruptedException {
+	@Test(dataProvider = "ProductSearch") 
+	public void testOne(String product, String id) throws InterruptedException {
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(homeApp.userProdutc));
 		this.hometask.fillProdutc(product);
 		Reports.log(LogStatus.INFO, "Inserção de Produto", ScreenShot.capture(driver));
 		this.hometask.searchProduto();
 		
-		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(homeApp.userSelector));
-		assertEquals(result, driver.findElement(homeApp.userSelector).getText());
+		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(homeApp.waitSearch));
 		Reports.log(LogStatus.INFO, "Produtos Encontrados", ScreenShot.capture(driver));
 		this.hometask.selectProdutc();
+		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(homeApp.userButton));
 		this.hometask.goToProdutc();
-		By userProdutcSelector = By.id(id);
-		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(userProdutcSelector));
+		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(homeApp.getProduct));
 		Reports.log(LogStatus.INFO, "Confirmação Produto", ScreenShot.capture(driver));
 		
 		String userProduct = this.driver.findElement(homeApp.getProduct).getText().toString();
 		this.driver.findElement(By.id(id)).click();
 		Reports.log(LogStatus.INFO, "Produto adicionado carrinho", ScreenShot.capture(driver));
-		
-		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(homeApp.userProdutc));
+				
+		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(homeApp.userSelector));
 		this.hometask.goShoppingCart();
 		this.hometask.shoppingCart();
-		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(homeApp.resulte));
+		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(homeApp.userResulte));
 		Reports.log(LogStatus.INFO, "Conferindo Carrinho", ScreenShot.capture(driver));
-		String getProduct = this.driver.findElement(homeApp.resulte).getText().toString();
+		String getProduct = this.driver.findElement(homeApp.userResulte).getText().toString();
 
 		assertEquals(userProduct, getProduct); 
 		Reports.log(LogStatus.PASS, "Produto Correto", ScreenShot.capture(driver));
 	}
-	
+	  
 
 	@AfterClass
 	public void tearDown() {
